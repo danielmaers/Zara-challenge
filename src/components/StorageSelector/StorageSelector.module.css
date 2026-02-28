@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option {
+  width: 5.938rem;
+  height: 4.063rem;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+    background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.option:hover {
+  border-color: var(--color-primary);
+}
+
+.optionSelected {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: var(--color-primary);
+}

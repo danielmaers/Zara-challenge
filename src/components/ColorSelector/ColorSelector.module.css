@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+  /* border: 1px solid #cccccc; */
+  outline: 1px solid #cccccc;
+  outline-offset: 2px;
+  transition: border-color var(--transition-fast), outline-color var(--transition-fast);
+  cursor: pointer;
+  padding: 0;
+}
+
+.swatch:hover {
+  /* border-color: #000000; */
+  outline-color: #000000;
+}
+
+.swatchSelected {
+  /* border-color: #000000; */
+  outline-color: #000000;
+}
+
+.colorName {
+  font-size: var(--font-size-sm);
+}

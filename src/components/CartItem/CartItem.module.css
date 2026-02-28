@@ -1,0 +1,82 @@
+.item {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 280px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-bg-subtle);
+}
+
+.image {
+  object-fit: contain;
+  padding: var(--spacing-md);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.brand {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+}
+
+.name {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.specs {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.price {
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-xs);
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  font-family: var(--font-family);
+  letter-spacing: 0.05em;
+  color: var(--color-error);
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: left;
+}
+
+.removeButton:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 639px) {
+  .item {
+    grid-template-columns: 100px 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .imageWrapper {
+    width: 100px;
+  }
+}

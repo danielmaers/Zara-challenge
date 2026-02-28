@@ -1,0 +1,84 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: black;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 1s ease;
+  z-index: 0;
+}
+
+.card:hover::before {
+  transform: scaleY(1);
+}
+
+.imageWrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: contain;
+  padding: var(--spacing-md);
+}
+
+.info {
+  position: relative;
+  z-index: 1;
+  padding: var(--spacing-sm);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.nameGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.brand {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-brand-secondary);
+  transition: color 1s ease;
+}
+
+.name {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+  transition: color 1s ease;
+}
+
+.price {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+  white-space: nowrap;
+  transition: color 1s ease;
+}
+
+.card:hover .brand,
+.card:hover .name,
+.card:hover .price {
+  color: white;
+}
